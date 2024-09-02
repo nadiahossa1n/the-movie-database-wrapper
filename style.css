@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "SUSE", sans-serif
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+h2 {
+    margin-bottom: 60px;
+}
+
+img {
+    width: 100%;
+    object-fit: fill;
+    vertical-align: top;
+}
+
+input {
+    color: rgba(0, 0, 0, .87);
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    padding-left: 20px;
+}
+
+#nav {
+    padding: 40px 15px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(13, 37, 63);
+    color: white;
+}
+
+.nav-bar__container {
+    margin-top: -20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    text-decoration: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+}
+
+.nav__link:hover {
+    border-bottom: 2px solid;
+}
+
+.logo__wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.logo__img {
+    width: 80px;
+    padding-right: 16px;
+}
+
+.logo__text {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.content__wrapper {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 15px;
+    top: 0;
+}
+
+.input__wrapper {
+    display: flex;
+    position: relative;
+    border-radius: 50px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; 
+    overflow: hidden;
+}
+
+.search__img__wrapper {
+    position: absolute;
+    right: 0;
+    color: rgb(1, 180, 228);
+    padding: 0 20px 0 8px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search__img {
+    width: 32px;
+    height: 32px;
+    transition: all 300ms ease-in-out;
+}
+
+.search__img:hover {
+    color: rgb(144, 206, 161);
+    cursor: pointer;
+}
+
+#results {
+    padding: 40px 20px;;
+}
+
+.results__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.result__wrapper {
+    width: 28%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    margin: 16px 0;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.result__content__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    margin: auto;
+    width: 100%;
+}
+
+.result__title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.result__date {
+    color: rgb(153, 153, 153);
+    font-size: 16px;
+    padding-bottom: 12px;
+}
+
+.results__list__loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+    font-size: 60px;
+    color: rgb(144, 206, 161);
+}
+
+.results__loading__spinner {
+    display: none !important;
+}
+
+.results__list__loading .results__loading__spinner {
+    display: flex !important;
+}
+
+.fa-spinner {
+    animation: rotate 600ms infinite linear;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 2px;
+}
+
+@media (max-width:768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .result__wrapper {
+        width: 48%;
+    }
+}
+
+@media (max-width:550px) {
+    .results__list {
+        justify-content: center;
+    }
+
+    .result__wrapper {
+        width: 85%;
+    }
+}
