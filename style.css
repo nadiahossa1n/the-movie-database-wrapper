@@ -36,6 +36,10 @@ input {
     padding-left: 20px;
 }
 
+span {
+    color: rgb(144, 206, 161);
+}
+
 #nav {
     padding: 40px 15px;
     display: flex;
@@ -85,7 +89,7 @@ input {
 
 .logo__text {
     font-size: 40px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1;
 }
 
@@ -106,6 +110,14 @@ input {
     max-width: 800px;
     margin: 0 auto; 
     overflow: hidden;
+}
+
+#results {
+    display: none;
+}
+
+#results .display__results {
+    display: flex;
 }
 
 .search__img__wrapper {
@@ -130,9 +142,48 @@ input {
     cursor: pointer;
 }
 
+#trending,
 #results {
     padding: 40px 20px;;
 }
+
+.trending__list {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.trending__wrapper {
+    animation: scroll 60s linear infinite;
+    width: 100%;
+    margin-right: 8px;
+    padding-top: 16px;
+}
+
+.trending__img__wrapper {
+    width: 300px;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+    overflow: hidden;
+}
+
+.trending__title {
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 8px;
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-2050%);
+    }
+  }
+  
 
 .results__list {
     display: flex;
@@ -208,7 +259,6 @@ input {
 }
 
 footer {
-    position: fixed;
     bottom: 0;
     width: 100%;
     display: flex;
